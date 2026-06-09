@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeleGiftWatcherBot — Telegram Gift NFT Tracker</title>
+    <meta name="description" content="Track Telegram Gift NFT floor prices, monitor collections, and get price alerts.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f0f23; color: #e0e0e0; min-height: 100vh; display: flex; flex-direction: column; }
+        .container { max-width: 720px; margin: 0 auto; padding: 60px 24px; flex: 1; }
+        .logo { font-size: 48px; margin-bottom: 8px; }
+        h1 { font-size: 28px; font-weight: 700; background: linear-gradient(135deg, #00b4d8, #48cae4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px; }
+        .subtitle { font-size: 16px; color: #888; margin-bottom: 40px; }
+        .card { background: #1a1a3e; border-radius: 16px; padding: 24px; margin-bottom: 16px; border: 1px solid #2a2a5e; }
+        .card h2 { font-size: 18px; color: #48cae4; margin-bottom: 12px; }
+        .card p, .card li { font-size: 14px; line-height: 1.7; color: #bbb; }
+        .card ul { padding-left: 20px; }
+        .card li { margin-bottom: 4px; }
+        .btn { display: inline-block; background: linear-gradient(135deg, #00b4d8, #0077b6); color: #fff; padding: 12px 32px; border-radius: 8px; text-decoration: none; font-size: 15px; font-weight: 600; margin-top: 8px; }
+        .btn:hover { opacity: .9; }
+        .features { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; }
+        .feature { background: #14143a; border-radius: 10px; padding: 16px; text-align: center; border: 1px solid #2a2a5e; }
+        .feature .icon { font-size: 28px; margin-bottom: 6px; }
+        .feature span { font-size: 13px; color: #aaa; }
+        footer { text-align: center; padding: 24px; font-size: 12px; color: #555; }
+        .lang-switch { text-align: right; margin-bottom: 24px; }
+        .lang-switch a { color: #48cae4; text-decoration: none; font-size: 13px; cursor: pointer; }
+        .lang-switch a:hover { text-decoration: underline; }
+        [lang=ru] { display: none; }
+        @media (max-width: 600px) { .features { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="lang-switch">
+        <a onclick="setLang('en')">English</a> | <a onclick="setLang('ru')">Русский</a>
+    </div>
+
+    <div lang="en">
+        <div class="logo">🤖</div>
+        <h1>TeleGiftWatcherBot</h1>
+        <p class="subtitle">Track Telegram Gift NFT floor prices & get alerts on spikes</p>
+
+        <div class="card">
+            <h2>What it does</h2>
+            <p>Monitors all 138 Telegram Gift NFT collections — floor prices from GetGems, MRKT, Portals and Tonnel. Get notified when a collection jumps in price.</p>
+            <div class="features">
+                <div class="feature"><div class="icon">💰</div><span>Floor prices in TON, USD, UAH</span></div>
+                <div class="feature"><div class="icon">🔔</div><span>Price spike alerts</span></div>
+                <div class="feature"><div class="icon">🎁</div><span>Your gift portfolio value</span></div>
+                <div class="feature"><div class="icon">📊</div><span>Top gainers & losers</span></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>How to use</h2>
+            <p>Open <b><a href="https://t.me/TeleGiftWatcherBot" style="color:#48cae4;">@TeleGiftWatcherBot</a></b> on Telegram and use the buttons:</p>
+            <ul>
+                <li><b>Check Price</b> — floor price of any collection</li>
+                <li><b>Track</b> — monitor & get alerts on price change</li>
+                <li><b>My Gifts</b> — total value of your gift inventory</li>
+                <li><b>Collections</b> — top 30 by floor price</li>
+                <li><b>Movers</b> — biggest gainers & losers</li>
+            </ul>
+            <a class="btn" href="https://t.me/TeleGiftWatcherBot">Open in Telegram</a>
+        </div>
+
+        <div class="card">
+            <h2>Premium</h2>
+            <p>Unlimited tracked collections + 1% minimum alert threshold + checks every 2 minutes. Buy with Telegram Stars.</p>
+        </div>
+    </div>
+
+    <div lang="ru">
+        <div class="logo">🤖</div>
+        <h1>TeleGiftWatcherBot</h1>
+        <p class="subtitle">Отслеживай цены NFT-подарков Telegram и получай оповещения</p>
+
+        <div class="card">
+            <h2>Возможности</h2>
+            <p>Мониторинг всех 138 коллекций NFT-подарков Telegram — цены с GetGems, MRKT, Portals и Tonnel. Оповещения при взлёте цены.</p>
+            <div class="features">
+                <div class="feature"><div class="icon">💰</div><span>Цены в TON, USD, UAH</span></div>
+                <div class="feature"><div class="icon">🔔</div><span>Оповещения о скачках</span></div>
+                <div class="feature"><div class="icon">🎁</div><span>Стоимость твоих подарков</span></div>
+                <div class="feature"><div class="icon">📊</div><span>Лидеры роста и падения</span></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Как использовать</h2>
+            <p>Открой <b><a href="https://t.me/TeleGiftWatcherBot" style="color:#48cae4;">@TeleGiftWatcherBot</a></b> в Telegram и нажимай кнопки:</p>
+            <ul>
+                <li><b>Проверить цену</b> — цена любой коллекции</li>
+                <li><b>Отслеживать</b> — мониторинг и оповещения</li>
+                <li><b>Мои подарки</b> — стоимость твоих подарков</li>
+                <li><b>Коллекции</b> — топ-30 по цене</li>
+                <li><b>Лидеры</b> — кто вырос и упал</li>
+            </ul>
+            <a class="btn" href="https://t.me/TeleGiftWatcherBot">Открыть в Telegram</a>
+        </div>
+
+        <div class="card">
+            <h2>Premium</h2>
+            <p>Безлимитные треки + порог оповещения от 1% + проверка каждые 2 минуты. Покупка за Telegram Stars.</p>
+        </div>
+    </div>
+</div>
+<footer>TeleGiftWatcherBot &mdash; Telegram Gift NFT Tracker</footer>
+<script>
+function setLang(l) {
+    document.querySelectorAll('[lang]').forEach(el => el.style.display = el.getAttribute('lang') === l ? '' : 'none');
+}
+setLang('en');
+</script>
+</body>
+</html>
